@@ -1,5 +1,7 @@
 node_modules
 client/ecommerce-frontend/node_modules
 server/node_modules
-server/.env
 .vscode
+server/node_modules
+client/ecommerce-frontend/node_modules
+
