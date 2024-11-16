@@ -1,0 +1,24 @@
+.products-page{
+    padding: 40px;
+    background-color: rgb(226, 226, 234);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.product-form-card{
+    background-color: #f9eaed;
+    width: 90%;
+    border-radius: 20px;
+    padding: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+h2.empty{
+    margin: 30px;
+}

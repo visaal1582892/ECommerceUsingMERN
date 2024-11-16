@@ -1,0 +1,39 @@
+/* src/components/UserProfile.css */
+.profile-container {
+    background-color: #F5F5F5; /* Light Grey */
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    text-align: center;
+  }
+  
+  .profile-card {
+    background-color: #FFFFFF; /* White */
+    border: none;
+    padding: 30px;
+  }
+  
+  .profile-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .profile-image {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+    border: 5px solid #4ECDC4; /* Turquoise */
+  }
+  
+  .profile-name {
+    color: #2D3142; /* Dark Blue */
+    margin-bottom: 20px;
+  }
+  
+  .profile-text {
+    color: #4A4A4A; /* Dark Grey */
+    font-size: 18px;
+    text-align: left;
+  }
+  

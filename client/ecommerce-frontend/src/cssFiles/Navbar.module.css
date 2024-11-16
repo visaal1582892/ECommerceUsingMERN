@@ -1,0 +1,52 @@
+/* Reset some basic styles for better cross-browser consistency */
+body, html, ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* General styles */
+  body {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .navbar {
+    display: flex;
+    background-color: #445663;
+    padding: 10px 20px 10px 0px;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .navbarMenu {
+    display: flex;
+    list-style: none;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 0;
+  }
+  
+  .navbarItem {
+    margin-right: 30px;
+  }
+  
+  .navbarLink {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.1s ease;
+    -webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.1s ease;
+    -ms-transition: color 0.1s ease;
+    -o-transition: color 0.1s ease;
+}
+  
+  .navbarLink:hover {
+    color: #FF6B6B;
+  }
+
+  .iconOrButtons{
+    margin-top: auto;
+    margin-bottom: auto;
+  }

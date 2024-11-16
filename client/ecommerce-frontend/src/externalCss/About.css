@@ -1,0 +1,28 @@
+/* src/components/About.css */
+.about-container {
+    background-color: rgb(226, 226, 234); /* Light Grey */
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    text-align: center;
+  }
+  
+  .about-card {
+    background-color: #f9eaed;
+    border: none;
+    padding: 30px;
+  }
+  
+  .about-title {
+    color: #2D3142; /* Dark Blue */
+    margin-bottom: 20px;
+  }
+  
+  .about-text {
+    color: #4A4A4A; /* Dark Grey */
+    font-size: 18px;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  
