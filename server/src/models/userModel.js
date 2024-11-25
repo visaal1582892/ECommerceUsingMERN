@@ -30,7 +30,7 @@ const userSchema = new Schema({
     password: {
         type: String,
         required: [true, 'password must be given'],
-        minlength: [6, 'length of user name cannot be less than 3'],
+        minlength: [6, 'length of password cannot be less than 6'],
         set: (v) => bcrypt.hashSync(v, bcrypt.genSaltSync(10)),
     },
     image: {

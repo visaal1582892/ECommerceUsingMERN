@@ -1,13 +1,11 @@
 const express = require("express");
-const { getUsers, getUser, deleteUserById, processRegister, processLogin, activateUserAccount, updateUserById, verifyLoginToken, getUserImage, addToCart, removeFromCart } = require("../controllers/userController");
+const { getUsers, processRegister, processLogin, activateUserAccount, updateUserById, verifyLoginToken, getUserImage, addToCart, removeFromCart } = require("../controllers/userController");
 const upload = require("../middlewares/uploadImage");
 const { validateUserRegistration, validateUserLogin } = require("../validators/auth");
 const runValidation = require("../validators");
 const userRouter = express.Router();
 
 userRouter.get("/", getUsers);
-// userRouter.get('/:id', getUser);
-// userRouter.delete("/:id", deleteUserById);
 userRouter.post('/processRegister', upload.single('image'), validateUserRegistration, runValidation, processRegister);
 userRouter.post('/processLogin', validateUserLogin, runValidation, processLogin);
 userRouter.post("/verify",activateUserAccount);

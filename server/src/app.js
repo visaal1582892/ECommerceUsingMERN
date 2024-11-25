@@ -1,8 +1,8 @@
-const morgan = require('morgan');
+const morgan = require('morgan');   // for showing the logs on console.
 const express = require('express');
-const bodyParser = require("body-parser");
+const bodyParser = require("body-parser");   // for parsing data sent through http request.
 const createError = require("http-errors");
-const xssClean = require('xss-clean');
+const xssClean = require('xss-clean');   //prevents cross site scripting attacks by handling malicious user inputs.
 const rateLimit = require("express-rate-limit");
 const {userRouter} = require("./routers/userRouter");
 const { seedRouter } = require('./routers/seedRouter');
@@ -12,8 +12,8 @@ const cors = require("cors");
 const productRouter = require('./routers/productRouter');
 
 const limiter = rateLimit({
-    windowMs : 5 * 60 * 1000,
-    max : 500,
+    windowMs : 15 * 60 * 1000,
+    max : 100,
     message : 'too many requests given.'
 });
 
@@ -27,26 +27,13 @@ app.use('/api/users', userRouter);
 app.use('/seed/users', seedRouter);
 app.use('/api/products', productRouter);
 
-// const isLoggedIn = (req, res, next) => {
-//     loggedIn=true;
-//     if(loggedIn) {
-//         next();
-//     }else{
-//         return res.status(401).json({
-//             message: "please login first"
-//         });
-//     }
-// }
-
-// app.use(isLoggedIn);
-
 app.get('/',(req,res) => {
     successResponse(res, {status: 200, message: 'testing successful'})
 })
 
 // client error handling, we should only use next(...) for correct response as shown in server error.
 app.use((req, res, next) => {
-    next(createError(404, 'error occurred'));
+    next(createError(404, 'Page Not Found'));
 });
 
 // server error handling -> every error comes to this.
